@@ -1,0 +1,31 @@
+@import "_checkboxNav.vars";
+
+
+// override default values:
+$cbn-toggle-type: hamburger; // 'hamburger' or 'bar'
+$cbn-label-type: circle; // 'box' or 'circle'
+
+$cbn-color-link-first: transparent;
+$cbn-color-text-first: #cbeeff;
+$cbn-color-link-first-hover: transparent;
+$cbn-color-text-first-hover: #fff;
+
+$cbn-color-link-sub: transparent;
+$cbn-color-text-sub: #cbeeff;
+$cbn-color-link-sub-hover: rgba(255, 255, 255, 0.15);
+$cbn-color-text-sub-hover: #fff;
+
+$cbn-color-link-active: inherit;
+$cbn-color-text-active: #fff;
+
+$cbn-color-label: #0e2245;
+$cbn-color-arrow: #cbeeff;
+$cbn-color-toggle: $cbn-color-link-first; // only for bar!
+
+$cbn-padding-menuitem-first: 0 1em .25em;
+$cbn-padding-menuitem-sub: .5em 1em;
+$cbn-size-arrow: 5px;
+
+
+@import "checkboxNav.menu";
+@import "themes/theme.hamburger";

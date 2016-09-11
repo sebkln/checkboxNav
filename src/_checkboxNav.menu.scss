@@ -1,0 +1,275 @@
+/**
+ * MENU TOGGLE TYPE
+ */
+@if $cbn-toggle-type == bar {
+    #toggle-menu {
+        background-color: $cbn-color-toggle;
+        color: $cbn-color-text-first;
+        display: block;
+        padding: $cbn-padding-menuitem-sub;
+        position: relative;
+    }
+} @else if $cbn-toggle-type == hamburger {
+    #toggle-menu {
+        background: center center no-repeat transparent;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAXCAQAAAC/3ZebAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA82lDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjardA/SgNBHMXx70TULloE67mAgmu15eQPi2ARYopsqkxmBw1hd4fZn3/2Bh7B43iDFIIXUVJbqARLwU/1eM2DB+rZDPujzjGUlcRsYvJZPteHGw7YAwDrmmDG4yuAqq48vynYvqEAXk/NsD/ib/ZdiAK8AEnhGwd8AKsHCQJqAfSW6yCgBOitp5MBqCegK/5RAAZ1aOPq5lb0eZqm2hT10uvrthFfNvqycnUMdbTiC+B7A+Aoi7bVmS1Lq5OzhH83y+f6K71PUYA62ey6HXcX73/+7FzAJ0sbODDOTdGSAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAC/SURBVHjavJNLDoQwDEOfIw7L/S/gWRRKW4xGzGIqgUKCm49j7QYwAgzosPNpsTJA/03H4weQMFCaXLP1BK3nkIPVriumDjy8NRTtCbwhh9DVqW/X6RxEc7i7mTKyzFPm/akfMGg3gU73jhTo3Vh60I3slV4aaGx5XZnEX10TyxAH8ktD/SmLbvnEZs1bzuPKqvsq7ZfjEAaq/0suX5S6ftV7yAHKckvb3lirJPNVkuoUC+GzPEeZa9CThoyfAQDQ6Epi+uUd3gAAAABJRU5ErkJggg==');
+        display: block;
+        width: 40px;
+        height: 40px;
+
+    }
+}
+
+
+
+
+/**
+ * MENU ARROWS
+ */
+.cbnav__arrow {
+    border-right: $cbn-size-arrow solid transparent;
+    border-left: $cbn-size-arrow solid transparent;
+    border-top: $cbn-size-arrow solid $cbn-color-arrow;
+    display: inline-block;
+    vertical-align: middle;
+    height: 0;
+    width: 0;
+}
+
+
+.cbnav__arrow--sub {
+    border-top: $cbn-size-arrow solid $cbn-color-arrow;
+    border-left: $cbn-size-arrow solid transparent;
+    border-right: $cbn-size-arrow solid transparent;
+    display: inline-block;
+    vertical-align: middle;
+    height: 0;
+    width: 0;
+
+
+    // Change arrow direction
+    @media (min-width: $cbn-mediaquery) {
+        border-right: none;
+        border-bottom: $cbn-size-arrow solid transparent;
+        border-top: $cbn-size-arrow solid transparent;
+        border-left: $cbn-size-arrow solid $cbn-color-arrow;
+    }
+}
+
+
+
+
+/**
+ * MOBILE VIEW
+ */
+.cbnav__lvl--first {
+    background-color: $cbn-color-link-sub;
+
+
+    &::after {
+        clear: both;
+        content: "";
+        display: table;
+    }
+}
+
+
+.cbnav__lvl--first,
+.cbnav__lvl--sub {
+    margin: 0;
+    padding: 0;
+}
+
+
+.cbnav__lvl--first,
+.cbnav input[type="checkbox"] {
+    display: none;
+}
+
+
+#toggle:checked + .cbnav__lvl--first,
+.cbnav input[type="checkbox"]:checked + .cbnav__lvl--sub {
+    display: block;
+}
+
+
+.cbnav__item {
+    color: $cbn-color-text-first;
+    display: block;
+    position: relative;
+
+
+     a {
+         display: block;
+         position: relative;
+         text-decoration: none;
+         
+         &:hover,
+         &:focus {
+             text-decoration: none;
+         }
+     }
+}
+
+
+.cbnav__link--first {
+    // use sublevel colors here to have a consistent design in mobile view
+    background-color: $cbn-color-link-sub;
+    color: $cbn-color-text-sub;
+    padding: $cbn-padding-menuitem-sub;
+    padding-right: $cbn-size-arrow*7;
+
+    &:hover {
+        background-color: $cbn-color-link-sub-hover;
+        color: $cbn-color-text-sub-hover;
+    }
+}
+
+
+.cbnav__lvl--sub {
+    display: none;
+    padding-left: 1em;
+}
+
+
+.cbnav__link--sub {
+    background-color: $cbn-color-link-sub;
+    color: $cbn-color-text-sub;
+    padding: $cbn-padding-menuitem-sub;
+    padding-right: $cbn-size-arrow*7;
+
+
+    &:hover {
+        background-color: $cbn-color-link-sub-hover;
+        color: $cbn-color-text-sub-hover;
+    }
+}
+
+
+.cbnav__link--active {
+    background-color: $cbn-color-link-active;
+    color: $cbn-color-text-active;
+    padding: $cbn-padding-menuitem-sub;
+    padding-right: $cbn-size-arrow*7;
+}
+
+
+ul span.cbnav__label {
+    display: none;
+}
+
+
+
+
+/**
+ * DESKTOP VIEW
+ */
+@media only screen and (min-width: $cbn-mediaquery) {
+    .cbnav {
+        background-color: $cbn-color-link-first;
+    }
+
+    .cbnav__lvl--first {
+        background-color: transparent;
+    }
+    
+
+    #toggle-menu,
+    //.cbnav__label,
+    .cbnav input[type="checkbox"]:checked + .cbnav__lvl--sub {
+        display: none;
+    }
+    
+    
+    .cbnav__lvl--first,
+    .cbnav__item:hover > input[type="checkbox"] + .cbnav__lvl--sub {
+        display: block;
+    }
+
+    
+    .cbnav__item {
+        float: left;
+    }
+
+
+    .cbnav__link--first {
+        background-color: $cbn-color-link-first;
+        color: $cbn-color-text-first;
+        padding: $cbn-padding-menuitem-first;
+        padding-right: $cbn-size-arrow*7;
+
+
+        &:hover {
+            background-color: $cbn-color-link-first-hover;
+            color: $cbn-color-text-first-hover;
+        }
+    }
+    
+    
+    .cbnav__link--active {
+        background-color: $cbn-color-link-active;
+        color: $cbn-color-text-active;
+    }
+
+
+    .cbnav__lvl--sub {
+        display: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+            top: 100%;
+            left: 0;
+        width: $cbn-width-menuitem-sub;
+        z-index: 3000;
+
+
+        .cbnav__item {
+            float: none;
+        }
+
+
+        .cbnav__lvl--sub {
+            top: 0;
+            left: 100%;
+        }
+    }
+}
+
+
+
+
+/**
+ * LABELS
+ */
+.cbnav__label {
+    // required to vertically center the arrow:
+    &:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+}
+
+
+@if $cbn-label-type == box {
+    .cbnav__label {
+        background-color: $cbn-color-label;
+        height: 100%;
+        padding: 0 .5em;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+} @else if $cbn-label-type == circle {
+    .cbnav__label {
+        background-color: $cbn-color-label;
+        border-radius: 50%;
+        height: $cbn-size-arrow*4;
+        text-align: center;
+        position: absolute;
+        right: $cbn-size-arrow*2;
+        top: $cbn-size-arrow*1.5;
+        width: $cbn-size-arrow*4;
+    }
+}

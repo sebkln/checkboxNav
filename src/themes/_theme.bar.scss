@@ -1,0 +1,55 @@
+$custom-borders: 1px solid $cbn-color-link-active;
+
+
+
+
+.cbnav {
+    border-bottom: $custom-borders;
+}
+
+
+#toggle-menu {
+    border-bottom: $custom-borders;
+}
+
+
+.cbnav__lvl--sub {
+    border-top: $custom-borders;
+
+
+    .cbnav__item:last-child {
+        border-width: 0;
+    }
+}
+
+
+.cbnav__item {
+    border-bottom: $custom-borders;
+}
+
+
+.cbnav__item a {
+    transition: all .125s ease-in-out;
+    -webkit-transition: all .125s ease-in-out;
+}
+
+
+
+
+@media only screen and (min-width: $cbn-mediaquery) {
+    .cbnav__item {
+        border-width: 0 1px 0 0;
+    }
+
+
+    .cbnav__lvl--sub {
+        border-width: 0;
+    }
+
+
+    .cbnav__lvl--sub {
+        .cbnav__item {
+            border-width: 0 0 1px;
+        }
+    }
+}

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>A CSS-only, Sass-built responsive multi-level navigation :: checkboxNav</title>
+    
+    <!-- Load demo css w/ menu bar -->
+    <link rel="stylesheet" href="css/demo.default.css">
+
+    <!-- Add some styling for the page -->
+    <style>
+        .cbnav { position: relative; } /* solely for the logo */
+
+
+        .logo {
+            position: absolute;
+            right: 2.5em;
+            top: .5em;
+        }
+
+
+        @media (min-width: 768px) {
+            .logo { right: 1em; }
+        }
+    </style>
+</head>
+<body>
+
+
+<!-- Begin markup for example navigation -->
+<nav class="cbnav">
+    <label for="toggle" id="toggle-menu">Navigation
+        <span class="cbnav__label"><span class="cbnav__arrow"></span></span>
+    </label>
+    <input type="checkbox" id="toggle">
+    <ul class="cbnav__lvl--first">
+        <li class="cbnav__item"><a class="cbnav__link--first" href="default.html">Home</a></li>
+        <li class="cbnav__item"><a class="cbnav__link--first  cbnav__link--active" href="default.html">About us
+                <label title="Toggle drop-down" class="cbnav__label" for="id0"><span class="cbnav__arrow"></span></label>
+            </a>
+            <input type="checkbox" id="id0">
+            <ul class="cbnav__lvl--sub">
+                <li class="cbnav__item"><a class="cbnav__link--sub  cbnav__link--active" href="default.html">Contact</a></li>
+            </ul>
+        </li>
+        <li class="cbnav__item"><a class="cbnav__link--first" href="default.html">Our products
+                <label title="Toggle drop-down" class="cbnav__label" for="id1"><span class="cbnav__arrow"></span></label>
+            </a>
+            <input type="checkbox" id="id1">
+            <ul class="cbnav__lvl--sub">
+                <li class="cbnav__item"><a class="cbnav__link--sub" href="default.html">Fruits
+                        <label title="Toggle drop-down" class="cbnav__label" for="id2"><span class="cbnav__arrow--sub"></span></label>
+                    </a>
+                    <input type="checkbox" id="id2">
+                    <ul class="cbnav__lvl--sub">
+                        <li class="cbnav__item"><a class="cbnav__link--sub" href="default.html">Apples
+                                <label title="Toggle drop-down" class="cbnav__label" for="id3"><span class="cbnav__arrow--sub"></span></label>
+                            </a>
+                            <input type="checkbox" id="id3">
+                            <ul class="cbnav__lvl--sub">
+                                <li class="cbnav__item"><a class="cbnav__link--sub" href="default.html">Braeburn</a></li>
+                                <li class="cbnav__item"><a class="cbnav__link--sub" href="default.html">Elstar</a></li>
+                                <li class="cbnav__item"><a class="cbnav__link--sub" href="default.html">Gala</a></li>
+                                <li class="cbnav__item"><a class="cbnav__link--sub" href="default.html">Golden Delicious</a></li>
+                            </ul>
+                        </li>
+                        <li class="cbnav__item"><a class="cbnav__link--sub" href="default.html">Bananas</a></li>
+                        <li class="cbnav__item"><a class="cbnav__link--sub" href="default.html">Pears</a></li>
+                    </ul>
+                </li>
+                <li class="cbnav__item"><a class="cbnav__link--sub" href="default.html">Vegetables
+                        <label title="Toggle drop-down" class="cbnav__label" for="id4"><span class="cbnav__arrow--sub"></span></label>
+                    </a>
+                    <input type="checkbox" id="id4">
+                    <ul class="cbnav__lvl--sub">
+                        <li class="cbnav__item"><a class="cbnav__link--sub" href="default.html">Potatoes
+                                <label title="Toggle drop-down" class="cbnav__label" for="id5"><span class="cbnav__arrow--sub"></span></label>
+                            </a>
+                            <input type="checkbox" id="id5">
+                            <ul class="cbnav__lvl--sub">
+                                <li class="cbnav__item"><a class="cbnav__link--sub" href="default.html">waxy</a></li>
+                                <li class="cbnav__item"><a class="cbnav__link--sub" href="default.html">predominantly waxy</a></li>
+                                <li class="cbnav__item"><a class="cbnav__link--sub" href="default.html">mealy</a></li>
+                            </ul>
+                        </li>
+                        <li class="cbnav__item"><a class="cbnav__link--sub" href="default.html">Carrots</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="cbnav__item"><a class="cbnav__link--first" href="default.html">Legal notice</a></li>
+    </ul>
+    <a href="default.html"><img src="res/checkboxNav-logo-pos.svg" alt="logo" class="logo"></a>
+</nav>
+<!-- End markup for example navigation -->
+
+
+</body>
+</html>

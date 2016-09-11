@@ -1,0 +1,54 @@
+/**
+ * MENU TOGGLE TYPE
+ *
+ * Use a Hamburger Icon or a Navigation bar.
+ * Please note the slightly different HTML markup (demos).
+ *
+ */
+$cbn-toggle-type: bar; // 'hamburger' or 'bar'
+
+
+/**
+ * LABEL FORM
+ */
+$cbn-label-type: box; // 'box' or 'circle'
+
+
+/**
+ * COLORS
+ *
+ * You can assign different colors to the first level and the sublevels,
+ * e.g. a transparent bar and colored sublevels (see hamburger demo).
+ */
+/* first menu level */
+$cbn-color-link-first: #ddd;
+$cbn-color-text-first: #444;
+$cbn-color-link-first-hover: #aaa;
+$cbn-color-text-first-hover: #000;
+
+/* menu sublevels */
+$cbn-color-link-sub: $cbn-color-link-first;
+$cbn-color-text-sub: $cbn-color-text-first;
+$cbn-color-link-sub-hover: $cbn-color-link-first-hover;
+$cbn-color-text-sub-hover: $cbn-color-text-first-hover;
+
+/* active page */
+$cbn-color-link-active: #999;
+$cbn-color-text-active: #eee;
+
+/* miscellaneous */
+$cbn-color-label: #666;
+$cbn-color-arrow: #fff;
+$cbn-color-toggle: $cbn-color-link-first; // only for bar!
+
+
+/**
+ * MEASURES
+ */
+$cbn-padding-menuitem-first: .75em 1em;
+$cbn-padding-menuitem-sub: $cbn-padding-menuitem-first;
+
+$cbn-width-menuitem-sub: 12em;
+$cbn-size-arrow: 6px;
+
+$cbn-mediaquery: 768px;

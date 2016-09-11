@@ -1,0 +1,23 @@
+@import "_checkboxNav.vars";
+
+
+// override default values:
+$cbn-color-link-first: #424254;
+$cbn-color-text-first: #fff;
+$cbn-color-link-first-hover: #64908A;
+$cbn-color-text-first-hover: #fff;
+
+$cbn-color-link-sub: $cbn-color-link-first;
+$cbn-color-text-sub: $cbn-color-text-first;
+$cbn-color-link-sub-hover: $cbn-color-link-first-hover;
+$cbn-color-text-sub-hover: $cbn-color-text-first-hover;
+
+$cbn-color-link-active: #64908A;
+$cbn-color-text-active: #fff;
+
+$cbn-color-label: #a02a3c;
+$cbn-color-toggle: $cbn-color-link-first;
+
+
+@import "checkboxNav.menu";
+@import "themes/theme.bar";

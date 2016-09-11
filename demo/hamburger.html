@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>A CSS-only, Sass-built responsive multi-level navigation :: checkboxNav</title>
+
+    <!-- Load demo css w/ hamburger icon -->
+    <link rel="stylesheet" href="css/demo.hamburger.css">
+
+    <!-- Load a pretty webfont -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <!-- Add some styling for the page -->
+    <style>
+        body {
+            background: url(http://demo.sklein-medien.de/fileadmin/Demo/Images/hivernacle-barcelona-darkblue.jpg) no-repeat;
+            -webkit-background-size: cover;
+            background-size: cover;
+            font-family: 'Open Sans', sans-serif;
+            height: 100vh;
+            margin: 0;
+        }
+
+
+        .wrapper {
+            margin: 0 auto;
+            max-width: 50rem;
+            padding: .5rem 2% 0;
+        }
+
+
+        .cbnav { position: relative; } /* solely for the logo */
+
+
+        .logo {
+            position: absolute;
+            right: .5rem;
+            top: 5px;
+        }
+
+
+        @media (min-width: 768px) {
+            .wrapper { padding-top: 2rem; }
+            .logo { top: -7px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+
+
+    <!-- Begin markup for example navigation -->
+    <nav class="cbnav">
+        <label for="toggle" id="toggle-menu"></label>
+        <input type="checkbox" id="toggle">
+        <ul class="cbnav__lvl--first">
+            <li class="cbnav__item"><a class="cbnav__link--first" href="hamburger.html">Home</a></li>
+            <li class="cbnav__item"><a class="cbnav__link--first  cbnav__link--active" href="hamburger.html">About us
+                <label title="Toggle drop-down" class="cbnav__label" for="id0"><span class="cbnav__arrow"></span></label>
+            </a>
+                <input type="checkbox" id="id0">
+                <ul class="cbnav__lvl--sub">
+                    <li class="cbnav__item"><a class="cbnav__link--sub  cbnav__link--active" href="hamburger.html">Contact</a></li>
+                </ul>
+            </li>
+            <li class="cbnav__item"><a class="cbnav__link--first" href="hamburger.html">Our products
+                <label title="Toggle drop-down" class="cbnav__label" for="id1"><span class="cbnav__arrow"></span></label>
+            </a>
+                <input type="checkbox" id="id1">
+                <ul class="cbnav__lvl--sub">
+                    <li class="cbnav__item"><a class="cbnav__link--sub" href="hamburger.html">Fruits
+                        <label title="Toggle drop-down" class="cbnav__label" for="id2"><span class="cbnav__arrow--sub"></span></label>
+                    </a>
+                        <input type="checkbox" id="id2">
+                        <ul class="cbnav__lvl--sub">
+                            <li class="cbnav__item"><a class="cbnav__link--sub" href="hamburger.html">Apples
+                                <label title="Toggle drop-down" class="cbnav__label" for="id3"><span class="cbnav__arrow--sub"></span></label>
+                            </a>
+                                <input type="checkbox" id="id3">
+                                <ul class="cbnav__lvl--sub">
+                                    <li class="cbnav__item"><a class="cbnav__link--sub" href="hamburger.html">Braeburn</a></li>
+                                    <li class="cbnav__item"><a class="cbnav__link--sub" href="hamburger.html">Elstar</a></li>
+                                    <li class="cbnav__item"><a class="cbnav__link--sub" href="hamburger.html">Gala</a></li>
+                                    <li class="cbnav__item"><a class="cbnav__link--sub" href="hamburger.html">Golden Delicious</a></li>
+                                </ul>
+                            </li>
+                            <li class="cbnav__item"><a class="cbnav__link--sub" href="hamburger.html">Bananas</a></li>
+                            <li class="cbnav__item"><a class="cbnav__link--sub" href="hamburger.html">Pears</a></li>
+                        </ul>
+                    </li>
+                    <li class="cbnav__item"><a class="cbnav__link--sub" href="hamburger.html">Vegetables
+                        <label title="Toggle drop-down" class="cbnav__label" for="id4"><span class="cbnav__arrow--sub"></span></label>
+                    </a>
+                        <input type="checkbox" id="id4">
+                        <ul class="cbnav__lvl--sub">
+                            <li class="cbnav__item"><a class="cbnav__link--sub" href="hamburger.html">Potatoes
+                                <label title="Toggle drop-down" class="cbnav__label" for="id5"><span class="cbnav__arrow--sub"></span></label>
+                            </a>
+                                <input type="checkbox" id="id5">
+                                <ul class="cbnav__lvl--sub">
+                                    <li class="cbnav__item"><a class="cbnav__link--sub" href="hamburger.html">waxy</a></li>
+                                    <li class="cbnav__item"><a class="cbnav__link--sub" href="hamburger.html">predominantly waxy</a></li>
+                                    <li class="cbnav__item"><a class="cbnav__link--sub" href="hamburger.html">mealy</a></li>
+                                </ul>
+                            </li>
+                            <li class="cbnav__item"><a class="cbnav__link--sub" href="hamburger.html">Carrots</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="cbnav__item"><a class="cbnav__link--first" href="hamburger.html">Legal notice</a></li>
+        </ul>
+        <a href="hamburger.html"><img src="res/checkboxNav-logo-neg.svg" alt="logo" class="logo"></a>
+    </nav>
+    <!-- End markup for example navigation -->
+
+
+</div>
+
+</body>
+</html>

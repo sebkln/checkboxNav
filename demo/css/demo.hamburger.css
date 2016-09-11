@@ -1,0 +1,230 @@
+/**
+ * MENU TOGGLE TYPE
+ *
+ * Use a Hamburger Icon or a Navigation bar.
+ * Please note the slightly different HTML markup (demos).
+ *
+ */
+/**
+ * LABEL FORM
+ */
+/**
+ * COLORS
+ *
+ * You can assign different colors to the first level and the sublevels,
+ * e.g. a transparent bar and colored sublevels (see hamburger demo).
+ */
+/* first menu level */
+/* menu sublevels */
+/* active page */
+/* miscellaneous */
+/**
+ * MEASURES
+ */
+/**
+ * MENU TOGGLE TYPE
+ */
+#toggle-menu {
+  background: center center no-repeat transparent;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAXCAQAAAC/3ZebAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA82lDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjardA/SgNBHMXx70TULloE67mAgmu15eQPi2ARYopsqkxmBw1hd4fZn3/2Bh7B43iDFIIXUVJbqARLwU/1eM2DB+rZDPujzjGUlcRsYvJZPteHGw7YAwDrmmDG4yuAqq48vynYvqEAXk/NsD/ib/ZdiAK8AEnhGwd8AKsHCQJqAfSW6yCgBOitp5MBqCegK/5RAAZ1aOPq5lb0eZqm2hT10uvrthFfNvqycnUMdbTiC+B7A+Aoi7bVmS1Lq5OzhH83y+f6K71PUYA62ey6HXcX73/+7FzAJ0sbODDOTdGSAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAC/SURBVHjavJNLDoQwDEOfIw7L/S/gWRRKW4xGzGIqgUKCm49j7QYwAgzosPNpsTJA/03H4weQMFCaXLP1BK3nkIPVriumDjy8NRTtCbwhh9DVqW/X6RxEc7i7mTKyzFPm/akfMGg3gU73jhTo3Vh60I3slV4aaGx5XZnEX10TyxAH8ktD/SmLbvnEZs1bzuPKqvsq7ZfjEAaq/0suX5S6ftV7yAHKckvb3lirJPNVkuoUC+GzPEeZa9CThoyfAQDQ6Epi+uUd3gAAAABJRU5ErkJggg==");
+  display: block;
+  width: 40px;
+  height: 40px; }
+
+/**
+ * MENU ARROWS
+ */
+.cbnav__arrow {
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-top: 5px solid #cbeeff;
+  display: inline-block;
+  vertical-align: middle;
+  height: 0;
+  width: 0; }
+
+.cbnav__arrow--sub {
+  border-top: 5px solid #cbeeff;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  display: inline-block;
+  vertical-align: middle;
+  height: 0;
+  width: 0; }
+  @media (min-width: 768px) {
+    .cbnav__arrow--sub {
+      border-right: none;
+      border-bottom: 5px solid transparent;
+      border-top: 5px solid transparent;
+      border-left: 5px solid #cbeeff; } }
+
+/**
+ * MOBILE VIEW
+ */
+.cbnav__lvl--first {
+  background-color: transparent; }
+  .cbnav__lvl--first::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.cbnav__lvl--first,
+.cbnav__lvl--sub {
+  margin: 0;
+  padding: 0; }
+
+.cbnav__lvl--first,
+.cbnav input[type="checkbox"] {
+  display: none; }
+
+#toggle:checked + .cbnav__lvl--first,
+.cbnav input[type="checkbox"]:checked + .cbnav__lvl--sub {
+  display: block; }
+
+.cbnav__item {
+  color: #cbeeff;
+  display: block;
+  position: relative; }
+  .cbnav__item a {
+    display: block;
+    position: relative;
+    text-decoration: none; }
+    .cbnav__item a:hover, .cbnav__item a:focus {
+      text-decoration: none; }
+
+.cbnav__link--first {
+  background-color: transparent;
+  color: #cbeeff;
+  padding: 0.5em 1em;
+  padding-right: 35px; }
+  .cbnav__link--first:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff; }
+
+.cbnav__lvl--sub {
+  display: none;
+  padding-left: 1em; }
+
+.cbnav__link--sub {
+  background-color: transparent;
+  color: #cbeeff;
+  padding: 0.5em 1em;
+  padding-right: 35px; }
+  .cbnav__link--sub:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff; }
+
+.cbnav__link--active {
+  background-color: inherit;
+  color: #fff;
+  padding: 0.5em 1em;
+  padding-right: 35px; }
+
+ul span.cbnav__label {
+  display: none; }
+
+/**
+ * DESKTOP VIEW
+ */
+@media only screen and (min-width: 768px) {
+  .cbnav {
+    background-color: transparent; }
+
+  .cbnav__lvl--first {
+    background-color: transparent; }
+
+  #toggle-menu,
+  .cbnav input[type="checkbox"]:checked + .cbnav__lvl--sub {
+    display: none; }
+
+  .cbnav__lvl--first,
+  .cbnav__item:hover > input[type="checkbox"] + .cbnav__lvl--sub {
+    display: block; }
+
+  .cbnav__item {
+    float: left; }
+
+  .cbnav__link--first {
+    background-color: transparent;
+    color: #cbeeff;
+    padding: 0 1em 0.25em;
+    padding-right: 35px; }
+    .cbnav__link--first:hover {
+      background-color: transparent;
+      color: #fff; }
+
+  .cbnav__link--active {
+    background-color: inherit;
+    color: #fff; }
+
+  .cbnav__lvl--sub {
+    display: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 12em;
+    z-index: 3000; }
+    .cbnav__lvl--sub .cbnav__item {
+      float: none; }
+    .cbnav__lvl--sub .cbnav__lvl--sub {
+      top: 0;
+      left: 100%; } }
+/**
+ * LABELS
+ */
+.cbnav__label:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle; }
+
+.cbnav__label {
+  background-color: #0e2245;
+  border-radius: 50%;
+  height: 20px;
+  text-align: center;
+  position: absolute;
+  right: 10px;
+  top: 7.5px;
+  width: 20px; }
+
+#toggle-menu {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAXCAYAAAAV1F8QAAAACXBIWXMAAAsTAAALEwEAmpwYAAAKT2lDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjanVNnVFPpFj333vRCS4iAlEtvUhUIIFJCi4AUkSYqIQkQSoghodkVUcERRUUEG8igiAOOjoCMFVEsDIoK2AfkIaKOg6OIisr74Xuja9a89+bN/rXXPues852zzwfACAyWSDNRNYAMqUIeEeCDx8TG4eQuQIEKJHAAEAizZCFz/SMBAPh+PDwrIsAHvgABeNMLCADATZvAMByH/w/qQplcAYCEAcB0kThLCIAUAEB6jkKmAEBGAYCdmCZTAKAEAGDLY2LjAFAtAGAnf+bTAICd+Jl7AQBblCEVAaCRACATZYhEAGg7AKzPVopFAFgwABRmS8Q5ANgtADBJV2ZIALC3AMDOEAuyAAgMADBRiIUpAAR7AGDIIyN4AISZABRG8lc88SuuEOcqAAB4mbI8uSQ5RYFbCC1xB1dXLh4ozkkXKxQ2YQJhmkAuwnmZGTKBNA/g88wAAKCRFRHgg/P9eM4Ors7ONo62Dl8t6r8G/yJiYuP+5c+rcEAAAOF0ftH+LC+zGoA7BoBt/qIl7gRoXgugdfeLZrIPQLUAoOnaV/Nw+H48PEWhkLnZ2eXk5NhKxEJbYcpXff5nwl/AV/1s+X48/Pf14L7iJIEyXYFHBPjgwsz0TKUcz5IJhGLc5o9H/LcL//wd0yLESWK5WCoU41EScY5EmozzMqUiiUKSKcUl0v9k4t8s+wM+3zUAsGo+AXuRLahdYwP2SycQWHTA4vcAAPK7b8HUKAgDgGiD4c93/+8//UegJQCAZkmScQAAXkQkLlTKsz/HCAAARKCBKrBBG/TBGCzABhzBBdzBC/xgNoRCJMTCQhBCCmSAHHJgKayCQiiGzbAdKmAv1EAdNMBRaIaTcA4uwlW4Dj1wD/phCJ7BKLyBCQRByAgTYSHaiAFiilgjjggXmYX4IcFIBBKLJCDJiBRRIkuRNUgxUopUIFVIHfI9cgI5h1xGupE7yAAygvyGvEcxlIGyUT3UDLVDuag3GoRGogvQZHQxmo8WoJvQcrQaPYw2oefQq2gP2o8+Q8cwwOgYBzPEbDAuxsNCsTgsCZNjy7EirAyrxhqwVqwDu4n1Y8+xdwQSgUXACTYEd0IgYR5BSFhMWE7YSKggHCQ0EdoJNwkDhFHCJyKTqEu0JroR+cQYYjIxh1hILCPWEo8TLxB7iEPENyQSiUMyJ7mQAkmxpFTSEtJG0m5SI+ksqZs0SBojk8naZGuyBzmULCAryIXkneTD5DPkG+Qh8lsKnWJAcaT4U+IoUspqShnlEOU05QZlmDJBVaOaUt2ooVQRNY9aQq2htlKvUYeoEzR1mjnNgxZJS6WtopXTGmgXaPdpr+h0uhHdlR5Ol9BX0svpR+iX6AP0dwwNhhWDx4hnKBmbGAcYZxl3GK+YTKYZ04sZx1QwNzHrmOeZD5lvVVgqtip8FZHKCpVKlSaVGyovVKmqpqreqgtV81XLVI+pXlN9rkZVM1PjqQnUlqtVqp1Q61MbU2epO6iHqmeob1Q/pH5Z/YkGWcNMw09DpFGgsV/jvMYgC2MZs3gsIWsNq4Z1gTXEJrHN2Xx2KruY/R27iz2qqaE5QzNKM1ezUvOUZj8H45hx+Jx0TgnnKKeX836K3hTvKeIpG6Y0TLkxZVxrqpaXllirSKtRq0frvTau7aedpr1Fu1n7gQ5Bx0onXCdHZ4/OBZ3nU9lT3acKpxZNPTr1ri6qa6UbobtEd79up+6Ynr5egJ5Mb6feeb3n+hx9L/1U/W36p/VHDFgGswwkBtsMzhg8xTVxbzwdL8fb8VFDXcNAQ6VhlWGX4YSRudE8o9VGjUYPjGnGXOMk423GbcajJgYmISZLTepN7ppSTbmmKaY7TDtMx83MzaLN1pk1mz0x1zLnm+eb15vft2BaeFostqi2uGVJsuRaplnutrxuhVo5WaVYVVpds0atna0l1rutu6cRp7lOk06rntZnw7Dxtsm2qbcZsOXYBtuutm22fWFnYhdnt8Wuw+6TvZN9un2N/T0HDYfZDqsdWh1+c7RyFDpWOt6azpzuP33F9JbpL2dYzxDP2DPjthPLKcRpnVOb00dnF2e5c4PziIuJS4LLLpc+Lpsbxt3IveRKdPVxXeF60vWdm7Obwu2o26/uNu5p7ofcn8w0nymeWTNz0MPIQ+BR5dE/C5+VMGvfrH5PQ0+BZ7XnIy9jL5FXrdewt6V3qvdh7xc+9j5yn+M+4zw33jLeWV/MN8C3yLfLT8Nvnl+F30N/I/9k/3r/0QCngCUBZwOJgUGBWwL7+Hp8Ib+OPzrbZfay2e1BjKC5QRVBj4KtguXBrSFoyOyQrSH355jOkc5pDoVQfujW0Adh5mGLw34MJ4WHhVeGP45wiFga0TGXNXfR3ENz30T6RJZE3ptnMU85ry1KNSo+qi5qPNo3ujS6P8YuZlnM1VidWElsSxw5LiquNm5svt/87fOH4p3iC+N7F5gvyF1weaHOwvSFpxapLhIsOpZATIhOOJTwQRAqqBaMJfITdyWOCnnCHcJnIi/RNtGI2ENcKh5O8kgqTXqS7JG8NXkkxTOlLOW5hCepkLxMDUzdmzqeFpp2IG0yPTq9MYOSkZBxQqohTZO2Z+pn5mZ2y6xlhbL+xW6Lty8elQfJa7OQrAVZLQq2QqboVFoo1yoHsmdlV2a/zYnKOZarnivN7cyzytuQN5zvn//tEsIS4ZK2pYZLVy0dWOa9rGo5sjxxedsK4xUFK4ZWBqw8uIq2Km3VT6vtV5eufr0mek1rgV7ByoLBtQFr6wtVCuWFfevc1+1dT1gvWd+1YfqGnRs+FYmKrhTbF5cVf9go3HjlG4dvyr+Z3JS0qavEuWTPZtJm6ebeLZ5bDpaql+aXDm4N2dq0Dd9WtO319kXbL5fNKNu7g7ZDuaO/PLi8ZafJzs07P1SkVPRU+lQ27tLdtWHX+G7R7ht7vPY07NXbW7z3/T7JvttVAVVN1WbVZftJ+7P3P66Jqun4lvttXa1ObXHtxwPSA/0HIw6217nU1R3SPVRSj9Yr60cOxx++/p3vdy0NNg1VjZzG4iNwRHnk6fcJ3/ceDTradox7rOEH0x92HWcdL2pCmvKaRptTmvtbYlu6T8w+0dbq3nr8R9sfD5w0PFl5SvNUyWna6YLTk2fyz4ydlZ19fi753GDborZ752PO32oPb++6EHTh0kX/i+c7vDvOXPK4dPKy2+UTV7hXmq86X23qdOo8/pPTT8e7nLuarrlca7nuer21e2b36RueN87d9L158Rb/1tWeOT3dvfN6b/fF9/XfFt1+cif9zsu72Xcn7q28T7xf9EDtQdlD3YfVP1v+3Njv3H9qwHeg89HcR/cGhYPP/pH1jw9DBY+Zj8uGDYbrnjg+OTniP3L96fynQ89kzyaeF/6i/suuFxYvfvjV69fO0ZjRoZfyl5O/bXyl/erA6xmv28bCxh6+yXgzMV70VvvtwXfcdx3vo98PT+R8IH8o/2j5sfVT0Kf7kxmTk/8EA5jz/GMzLdsAAAAgY0hSTQAAeiUAAICDAAD5/wAAgOkAAHUwAADqYAAAOpgAABdvkl/FRgAAAH1JREFUeNrslDsKwDAMQ2XTu4bcf5c7lJR8HFo6eCjWFByBCNaLmJkhQIogZdBnSa0VJMd01XvWn2cPAPfO86pnJIlWxj5w9syhs2d4UVC743Z0AEhgM+iqdyllC+ub+Q7Q5RPwYPVEEiKygNlmTzAnsFnvHwedAAAA//8DAL2WO4lNCkTNAAAAAElFTkSuQmCC"); }
+
+.cbnav__lvl--first {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0, rgba(220, 235, 251, 0.1)), color-stop(1, rgba(171, 183, 214, 0.4)));
+  background-image: -webkit-linear-gradient(-90deg, rgba(220, 235, 251, 0.1) 0%, rgba(171, 183, 214, 0.4) 100%);
+  background-image: linear-gradient(180deg, rgba(220, 235, 251, 0.1) 0%, rgba(171, 183, 214, 0.4) 100%); }
+
+.cbnav__item a {
+  transition: all .125s ease-in-out;
+  -webkit-transition: all .125s ease-in-out; }
+
+.cbnav__arrow,
+.cbnav__arrow--sub {
+  margin-bottom: 5px; }
+
+.cbnav__link--active {
+  font-weight: 700; }
+
+@media only screen and (min-width: 768px) {
+  .cbnav__lvl--first {
+    background: transparent; }
+
+  .cbnav__lvl--first > li > a {
+    padding: 0 1em 0.25em; }
+    .cbnav__lvl--first > li > a .cbnav__label {
+      background-color: transparent;
+      position: relative;
+      top: auto;
+      right: auto; }
+
+  .cbnav__lvl--sub {
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0, rgba(220, 235, 251, 0.1)), color-stop(1, rgba(171, 183, 214, 0.4)));
+    background-image: -webkit-linear-gradient(-90deg, rgba(220, 235, 251, 0.1) 0%, rgba(171, 183, 214, 0.4) 100%);
+    background-image: linear-gradient(180deg, rgba(220, 235, 251, 0.1) 0%, rgba(171, 183, 214, 0.4) 100%); }
+    .cbnav__lvl--sub .cbnav__link--active {
+      background-color: rgba(255, 255, 255, 0.15);
+      color: #fff; } }

@@ -1,0 +1,217 @@
+/**
+ * MENU TOGGLE TYPE
+ *
+ * Use a Hamburger Icon or a Navigation bar.
+ * Please note the slightly different HTML markup (demos).
+ *
+ */
+/**
+ * LABEL FORM
+ */
+/**
+ * COLORS
+ *
+ * You can assign different colors to the first level and the sublevels,
+ * e.g. a transparent bar and colored sublevels (see hamburger demo).
+ */
+/* first menu level */
+/* menu sublevels */
+/* active page */
+/* miscellaneous */
+/**
+ * MEASURES
+ */
+/**
+ * MENU TOGGLE TYPE
+ */
+#toggle-menu {
+  background-color: #424254;
+  color: #fff;
+  display: block;
+  padding: 0.75em 1em;
+  position: relative; }
+
+/**
+ * MENU ARROWS
+ */
+.cbnav__arrow {
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  border-top: 6px solid #fff;
+  display: inline-block;
+  vertical-align: middle;
+  height: 0;
+  width: 0; }
+
+.cbnav__arrow--sub {
+  border-top: 6px solid #fff;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  display: inline-block;
+  vertical-align: middle;
+  height: 0;
+  width: 0; }
+  @media (min-width: 768px) {
+    .cbnav__arrow--sub {
+      border-right: none;
+      border-bottom: 6px solid transparent;
+      border-top: 6px solid transparent;
+      border-left: 6px solid #fff; } }
+
+/**
+ * MOBILE VIEW
+ */
+.cbnav__lvl--first {
+  background-color: #424254; }
+  .cbnav__lvl--first::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.cbnav__lvl--first,
+.cbnav__lvl--sub {
+  margin: 0;
+  padding: 0; }
+
+.cbnav__lvl--first,
+.cbnav input[type="checkbox"] {
+  display: none; }
+
+#toggle:checked + .cbnav__lvl--first,
+.cbnav input[type="checkbox"]:checked + .cbnav__lvl--sub {
+  display: block; }
+
+.cbnav__item {
+  color: #fff;
+  display: block;
+  position: relative; }
+  .cbnav__item a {
+    display: block;
+    position: relative;
+    text-decoration: none; }
+    .cbnav__item a:hover, .cbnav__item a:focus {
+      text-decoration: none; }
+
+.cbnav__link--first {
+  background-color: #424254;
+  color: #fff;
+  padding: 0.75em 1em;
+  padding-right: 42px; }
+  .cbnav__link--first:hover {
+    background-color: #64908A;
+    color: #fff; }
+
+.cbnav__lvl--sub {
+  display: none;
+  padding-left: 1em; }
+
+.cbnav__link--sub {
+  background-color: #424254;
+  color: #fff;
+  padding: 0.75em 1em;
+  padding-right: 42px; }
+  .cbnav__link--sub:hover {
+    background-color: #64908A;
+    color: #fff; }
+
+.cbnav__link--active {
+  background-color: #64908A;
+  color: #fff;
+  padding: 0.75em 1em;
+  padding-right: 42px; }
+
+ul span.cbnav__label {
+  display: none; }
+
+/**
+ * DESKTOP VIEW
+ */
+@media only screen and (min-width: 768px) {
+  .cbnav {
+    background-color: #424254; }
+
+  .cbnav__lvl--first {
+    background-color: transparent; }
+
+  #toggle-menu,
+  .cbnav input[type="checkbox"]:checked + .cbnav__lvl--sub {
+    display: none; }
+
+  .cbnav__lvl--first,
+  .cbnav__item:hover > input[type="checkbox"] + .cbnav__lvl--sub {
+    display: block; }
+
+  .cbnav__item {
+    float: left; }
+
+  .cbnav__link--first {
+    background-color: #424254;
+    color: #fff;
+    padding: 0.75em 1em;
+    padding-right: 42px; }
+    .cbnav__link--first:hover {
+      background-color: #64908A;
+      color: #fff; }
+
+  .cbnav__link--active {
+    background-color: #64908A;
+    color: #fff; }
+
+  .cbnav__lvl--sub {
+    display: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 12em;
+    z-index: 3000; }
+    .cbnav__lvl--sub .cbnav__item {
+      float: none; }
+    .cbnav__lvl--sub .cbnav__lvl--sub {
+      top: 0;
+      left: 100%; } }
+/**
+ * LABELS
+ */
+.cbnav__label:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle; }
+
+.cbnav__label {
+  background-color: #a02a3c;
+  height: 100%;
+  padding: 0 .5em;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.cbnav {
+  border-bottom: 1px solid #64908A; }
+
+#toggle-menu {
+  border-bottom: 1px solid #64908A; }
+
+.cbnav__lvl--sub {
+  border-top: 1px solid #64908A; }
+  .cbnav__lvl--sub .cbnav__item:last-child {
+    border-width: 0; }
+
+.cbnav__item {
+  border-bottom: 1px solid #64908A; }
+
+.cbnav__item a {
+  transition: all .125s ease-in-out;
+  -webkit-transition: all .125s ease-in-out; }
+
+@media only screen and (min-width: 768px) {
+  .cbnav__item {
+    border-width: 0 1px 0 0; }
+
+  .cbnav__lvl--sub {
+    border-width: 0; }
+
+  .cbnav__lvl--sub .cbnav__item {
+    border-width: 0 0 1px; } }
