@@ -70,6 +70,7 @@ $cbn-color-text-sub-hover: $cbn-color-text-first-hover;
 $cbn-color-link-active: #64908A;
 $cbn-color-text-active: #fff;
 
+$cbn-color-navheader: #7abcb2;
 $cbn-color-label: #a02a3c;
 $cbn-color-toggle: $cbn-color-link-first;
 
