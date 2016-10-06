@@ -37,6 +37,7 @@ $cbn-color-link-active: #999;
 $cbn-color-text-active: #eee;
 
 /* miscellaneous */
+$cbn-color-navheader: #666;
 $cbn-color-label: #666;
 $cbn-color-arrow: #fff;
 $cbn-color-toggle: $cbn-color-link-first; // only for bar!
@@ -45,8 +46,11 @@ $cbn-color-toggle: $cbn-color-link-first; // only for bar!
 /**
  * MEASURES
  */
+$cbn-fontsize: 1em;
+$cbn-fontsize-navheader: .75em;
 $cbn-padding-menuitem-first: .75em 1em;
 $cbn-padding-menuitem-sub: $cbn-padding-menuitem-first;
+$cbn-padding-navheader: 1.5em 1.25em .25em;
 
 $cbn-width-menuitem-sub: 12em;
 $cbn-size-arrow: 6px;

@@ -28,6 +28,12 @@ $custom-borders: 1px solid $cbn-color-link-active;
 }
 
 
+.cbnav__item--header {
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+
 .cbnav__item a {
     transition: all .125s ease-in-out;
     -webkit-transition: all .125s ease-in-out;

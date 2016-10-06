@@ -92,6 +92,13 @@
     .cbnav__item a:hover, .cbnav__item a:focus {
       text-decoration: none; }
 
+.cbnav__item--header {
+  background-color: #424254;
+  color: #7abcb2;
+  display: block;
+  font-size: 0.75em;
+  padding: 1.5em 1.25em 0.25em; }
+
 .cbnav__link--first {
   background-color: #424254;
   color: #fff;
@@ -201,6 +208,10 @@ ul span.cbnav__label {
 
 .cbnav__item {
   border-bottom: 1px solid #64908A; }
+
+.cbnav__item--header {
+  letter-spacing: 0.2em;
+  text-transform: uppercase; }
 
 .cbnav__item a {
   transition: all .125s ease-in-out;

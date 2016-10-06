@@ -112,6 +112,15 @@
 }
 
 
+.cbnav__item--header {
+    background-color: $cbn-color-link-sub;
+    color: $cbn-color-navheader;
+    display: block;
+    font-size: $cbn-fontsize-navheader;
+    padding: $cbn-padding-navheader;
+}
+
+
 .cbnav__link--first {
     // use sublevel colors here to have a consistent design in mobile view
     background-color: $cbn-color-link-sub;

@@ -92,6 +92,13 @@
     .cbnav__item a:hover, .cbnav__item a:focus {
       text-decoration: none; }
 
+.cbnav__item--header {
+  background-color: transparent;
+  color: #fff;
+  display: block;
+  font-size: 0.75em;
+  padding: 1.5em 1.25em 0.25em; }
+
 .cbnav__link--first {
   background-color: transparent;
   color: #cbeeff;
