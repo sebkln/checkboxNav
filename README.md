@@ -1,5 +1,4 @@
-![checkboxNav]
-(http://demo.sklein-medien.de/fileadmin/Demo/Images/checkboxNav-logo-pos.svg =250x70)
+<img src="http://demo.sklein-medien.de/fileadmin/Demo/Images/checkboxNav-logo-pos.svg" alt="checkboxNav Logo" width="250" height="70">
 
 # checkboxNav
 
